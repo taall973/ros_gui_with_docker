@@ -27,7 +27,7 @@ sudo docker run -it \
     --volume="/etc/sudoers.d:/etc/sudoers.d:ro" \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     -u root \
-    osrf/ros:indigo-desktop-full \
+    osrf/ros:noetic-desktop-full \
     bash
 ```
 ## Running the container
