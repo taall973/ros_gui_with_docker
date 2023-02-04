@@ -17,7 +17,7 @@ You may find a more suitable image on https://registry.hub.docker.com/r/osrf/ros
 
 ```bash
 docker run -it \
-    --name=ros_noetic
+    --name=ros_noetic #replace with your specific name
     --user=$(id -u $USER):$(id -g $USER) \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
