@@ -16,20 +16,19 @@ These commands will create a docker container running the `osrf/ros:noetic-deskt
 You may find a more suitable image on https://registry.hub.docker.com/r/osrf/ros.
 
 ```bash
-docker run -it \
-    --name=ros_noetic #replace with your specific name
+sudo docker run -it \
+    --name=ros_noetic \
     --user=$(id -u $USER):$(id -g $USER) \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
-    --workdir="/home/$USER" \
-    --volume="/home/$USER:/home/$USER" \
     --volume="/etc/group:/etc/group:ro" \
     --volume="/etc/passwd:/etc/passwd:ro" \
     --volume="/etc/shadow:/etc/shadow:ro" \
     --volume="/etc/sudoers.d:/etc/sudoers.d:ro" \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-    osrf/ros:noetic-desktop-full \ #replace with your specific ros image
-    bash #entry command
+    -u root \
+    osrf/ros:indigo-desktop-full \
+    bash
 ```
 ## Running the container
 
