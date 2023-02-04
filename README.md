@@ -21,6 +21,7 @@ sudo docker run -it \
     --user=$(id -u $USER):$(id -g $USER) \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
+    --env="LIBGL_ALWAYS_SOFTWARE=1" \
     --volume="/etc/group:/etc/group:ro" \
     --volume="/etc/passwd:/etc/passwd:ro" \
     --volume="/etc/shadow:/etc/shadow:ro" \
