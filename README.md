@@ -18,6 +18,7 @@ You may find a more suitable image on https://registry.hub.docker.com/r/osrf/ros
 ```bash
 sudo docker run -it \
     --privileged \
+    --network host \
     --name=ros_noetic \
     --user=$(id -u $USER):$(id -g $USER) \
     --env="DISPLAY" \
